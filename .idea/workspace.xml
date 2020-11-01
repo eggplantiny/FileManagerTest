@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee05242a-0689-4d5b-94df-6a136bdf2763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/snapshot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/fileManagerTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/fileManagerTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/snapshot.js" beforeDir="false" afterPath="$PROJECT_DIR$/snapshot.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +53,7 @@
       <workItem from="1604116747792" duration="91000" />
       <workItem from="1604117114543" duration="2325000" />
       <workItem from="1604207733083" duration="3173000" />
-      <workItem from="1604214030940" duration="2179000" />
+      <workItem from="1604214030940" duration="6099000" />
     </task>
     <servers />
   </component>

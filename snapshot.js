@@ -15,29 +15,36 @@ function makeSnapshotFolder (fileName) {
 }
 
 function takeSnapShot (folder, fileName, snapshotFolder) {
-    ffmpeg(path.resolve(`${folder}\\${fileName}.mp4`))
-        .noAudio()
-        .withInputFps(1)
-        .on('filenames', function (filenames) {
-            console.log('screenshots are ' + filenames.join(', '))
-        })
-        .on('end', function() {
-            console.log('screenshots were saved')
-        })
-        .on('error', function(err) {
-            console.log('an error happened: ' + err.message)
-        })
-        .screenshots({
-            count: 100,
-            size: '1080x?',
-            folder: snapshotFolder,
-            finename: `${fileName}_%s.png`
-        })
+    return new Promise((resolve, reject) => {
+        ffmpeg(path.resolve(`${folder}\\${fileName}.mp4`))
+            .on('filenames', function (filenames) {
+                console.log('screenshots are ' + filenames.join(', '))
+            })
+            .on('end', function() {
+                console.log('screenshots were saved')
+                return resolve()
+            })
+            .on('error', function(err) {
+                return reject(err)
+            })
+            .screenshots({
+                count: 100,
+                size: '1080x?',
+                folder: snapshotFolder,
+                finename: `${fileName}_%s.png`
+            })
+    })
 }
 
-function run () {
+async function run () {
     const snapshotFolder = makeSnapshotFolder(fileName)
-    takeSnapShot(folder, fileName, snapshotFolder)
+    try {
+        console.time('snapshot')
+        await takeSnapShot(folder, fileName, snapshotFolder)
+        console.timeEnd('snapshot')
+    } catch (e) {
+        console.log('an error happened: ' + e.message)
+    }
 }
 
 run()
