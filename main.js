@@ -22,10 +22,12 @@ function getExtension (path) {
 
 walker.on('file', function (root, stat, next) {
     const { name, size } = stat
+
     if (size < minSize) {
         return next()
     }
-    stat.root = root
+
+    stat.path = root
     console.log(name)
     files.push(stat)
     next()
