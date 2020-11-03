@@ -17,9 +17,9 @@ function makeSnapshotFolder (fileName) {
 function takeSnapShot (folder, fileName, snapshotFolder) {
     return new Promise((resolve, reject) => {
         ffmpeg(path.resolve(`${folder}\\${fileName}.mp4`))
-            .on('filenames', function (filenames) {
-                console.log('screenshots are ' + filenames.join(', '))
-            })
+            // .on('filenames', function (filenames) {
+            //     console.log('screenshots are ' + filenames.join(', '))
+            // })
             .on('end', function() {
                 console.log('screenshots were saved')
                 return resolve()
@@ -27,12 +27,18 @@ function takeSnapShot (folder, fileName, snapshotFolder) {
             .on('error', function(err) {
                 return reject(err)
             })
-            .screenshots({
-                count: 100,
-                size: '1080x?',
-                folder: snapshotFolder,
-                finename: `${fileName}_%s.png`
-            })
+            .output(`${snapshotFolder}/${fileName}-$04d.jpg`)
+            .outputOptions(
+                '-q:v', '8',
+                '-vf', 'fps=1/10,scale=-1:120,tile=5x5',
+            )
+            .run()
+            // .screenshots({
+            //     count: 100,
+            //     size: '1080x?',
+            //     folder: snapshotFolder,
+            //     finename: `${fileName}_%s.png`
+            // })
     })
 }
 
