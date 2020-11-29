@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ee05242a-0689-4d5b-94df-6a136bdf2763" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snapshot.js" beforeDir="false" afterPath="$PROJECT_DIR$/snapshot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +32,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.13.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.19.3" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../node" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Algorithm" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,11 +62,20 @@
       <workItem from="1604579415575" duration="2084000" />
       <workItem from="1605093592975" duration="5000" />
       <workItem from="1605178783896" duration="598000" />
-      <workItem from="1606251238860" duration="945000" />
+      <workItem from="1606251238860" duration="1318000" />
+      <workItem from="1606305883468" duration="46000" />
+      <workItem from="1606525754536" duration="30000" />
+      <workItem from="1606658665510" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1700" y="475" key="FileChooserDialogImpl" timestamp="1606525783187">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="1700" y="475" key="FileChooserDialogImpl/0.0.2560.1440@0.0.2560.1440" timestamp="1606525783187" />
   </component>
 </project>
