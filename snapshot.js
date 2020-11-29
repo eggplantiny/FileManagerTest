@@ -15,6 +15,10 @@ function makeSnapshotFolder (fileName) {
     return targetPath
 }
 
+//  TODO    https://github.com/fireship-io/react-wasm-gif-maker/blob/main/src/App.jsx
+//  TODO    https://www.youtube.com/watch?v=-OTc0Ki7Sv0&list=PL0CDLPpiCzR5O2GbMpthYYScV4G83FDmq&index=3&ab_channel=Fireship
+//  TODO    https://www.peterbe.com/plog/fastest-way-to-take-screencaps-out-of-videos
+
 async function run () {
     const snapshotFolder = makeSnapshotFolder(fileName)
     try {
