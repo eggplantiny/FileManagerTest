@@ -1,11 +1,44 @@
+const fs = require("fs")
+const path = require("path")
+const ffmpeg = require("fluent-ffmpeg")
 
-const { createFFmpeg, fetchFile } = require('@ffmpeg/ffmpeg')
-const path = require('path')
-const fs = require('fs')
-const ffmpeg = createFFmpeg({ log: true })
 
-const folder = 'D:\\download\\torrent'
-const fileName = 'FC2-PPV-802311'
+const fileName = 'FC2-PPV-1616189_1.mp4'
+const filePath = path.resolve(__dirname, 'videos', fileName)
+
+function makeTimestamp (count) {
+  const startPositionPercent = 0
+  const endPositionPercent = 99
+  const addPercent = (endPositionPercent - startPositionPercent) / (count - 1)
+
+  return Array(count).fill('').map((_, index) => `${Math.round(startPositionPercent + addPercent + index)}%`)
+}
+
+function takeScreenshots(file, c = 0) {
+  const timestampList = makeTimestamp(99)
+
+  ffmpeg(file)
+    .on("start", () => {
+        if (c < 1) {
+            console.log(`start taking screenshots`)
+        }
+    })
+    .on("end", () => {
+        console.log(`taken screenshot: ${c}`)
+
+        if (c < timestampList.length) {
+            takeScreenshots(file, c + 1)
+        }
+    })
+    .screenshots({
+        count: 1,
+        timemarks: [timestampList[c]],
+        filename: `%b-${c + 1}.jpg`
+    }, path.join(path.dirname(file), `screenshots`))
+}
+
+takeScreenshots(filePath)
+
 
 function makeSnapshotFolder (fileName) {
     const targetPath = path.resolve(`./snapshots/${fileName}`)
@@ -19,18 +52,6 @@ function makeSnapshotFolder (fileName) {
 //  TODO    https://www.youtube.com/watch?v=-OTc0Ki7Sv0&list=PL0CDLPpiCzR5O2GbMpthYYScV4G83FDmq&index=3&ab_channel=Fireship
 //  TODO    https://www.peterbe.com/plog/fastest-way-to-take-screencaps-out-of-videos
 
-async function run () {
-    const snapshotFolder = makeSnapshotFolder(fileName)
-    try {
-        console.time('snapshot')
-        // await ffmpeg.FS('writeFile', fileName, awa)
-        console.timeEnd('snapshot')
-    } catch (e) {
-        console.log('an error happened: ' + e.message)
-    }
-}
-
-run()
 //
 // ffmpeg -ss 00:01:09 -i D:\download\torrent\FC2-PPV-802311.mp4 -vframes 1 snapshots/tmp/screencap-01.jpg
 // ffmpeg -ss 00:02:19 -i D:\download\torrent\FC2-PPV-802311.mp4 -vframes 1 snapshots/tmp/screencap-02.jpg

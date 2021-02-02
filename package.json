@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@ffmpeg/core": "^0.8.5",
     "@ffmpeg/ffmpeg": "^0.9.6",
     "fluent-ffmpeg": "^2.1.2",
     "moment": "^2.29.1",
