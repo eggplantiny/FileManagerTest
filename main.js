@@ -1,38 +1,41 @@
-const walk = require('walk')
 const path = require('path')
+const { walkDirectories } = require('./utils/walk')
+const { takeSnapshot } = require('./utils/snapshot')
+const targetPath = path.resolve('D:/download/torrent')
 
-const targetPath = path.resolve('D:\\download\\torrent')
+// walkDirectories(targetPath)
+//   .then(files => console.log(files))
+//   .catch(error => console.error(error))
 
-const walker = walk.walk(targetPath)
+async function run () {
+    const startDate = new Date()
+    console.log(`start at ${startDate}`)
 
-const files = []
+    console.log(`start scan ${targetPath} folder`)
+    const statList = await walkDirectories(targetPath)
+    const allCount = statList.length
+    console.log(`find all of ${allCount} files`)
 
-const minSize = 3e+8
+    let c = 0
+    let success = 0
+    let failure = 0
+    for await (const stat of statList) {
+        const { name, path } = stat
+        c += 1
 
-function getExtension (path) {
-    const basename = path.split(/[\\/]/).pop()
-    const pos = basename.lastIndexOf(".")
-
-    if (basename === "" || pos < 1) {
-        return null
+        console.log(`[${c}/${allCount}] taking ${name} snapshots on ${path}`)
+        try {
+            await takeSnapshot(name, path)
+            success += 1
+        } catch (e) {
+            failure += 1
+            console.error(e)
+        }
     }
 
-    return basename.slice(pos + 1)
+    const endDate = new Date()
+    console.log(`complete script at ${endDate}`)
+    console.log(`success ${success} files and failed ${failure} files on ${allCount} files`)
 }
 
-walker.on('file', function (root, stat, next) {
-    const { name, size } = stat
-
-    if (size < minSize) {
-        return next()
-    }
-
-    stat.path = root
-    console.log(name)
-    files.push(stat)
-    next()
-})
-
-walker.on('end', function () {
-    console.log(files)
-})
+run()
