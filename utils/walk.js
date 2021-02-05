@@ -1,7 +1,7 @@
-
+const fs = require('fs')
 const walk = require('walk')
 
-function walkDirectories (targetPath) {
+function fileWalker (targetPath) {
   const minSize = 3e+8
   const files = []
   const walker = walk.walk(targetPath)
@@ -44,6 +44,15 @@ function walkDirectories (targetPath) {
   })
 }
 
+function folderWalker (targetPath) {
+  const statList = []
+  let count = 0
+
+  const folderNameList = fs.readdirSync(targetPath)
+  return folderNameList
+}
+
 module.exports = {
-  walkDirectories
+  fileWalker,
+  folderWalker
 }
