@@ -1,5 +1,5 @@
 const path = require('path')
-const { fileWalker } = require('./utils/walk')
+const { fileWalker, folderWalker } = require('./utils/walk')
 const { takeSnapshot } = require('./utils/snapshot')
 const targetPath = path.resolve('D:/download/torrent')
 
@@ -11,8 +11,13 @@ async function run () {
     const startDate = new Date()
     console.log(`start at ${startDate}`)
 
+    const snapshotFolder = path.resolve(__dirname, 'snapshots')
+    const folderList = folderWalker(snapshotFolder)
+    const skipMap = new Map()
+    folderList.forEach(name => skipMap.set(name, true))
+
     console.log(`start scan ${targetPath} folder`)
-    const statList = await fileWalker(targetPath)
+    const statList = await fileWalker(targetPath, skipMap)
     const allCount = statList.length
     console.log(`find all of ${allCount} files`)
 

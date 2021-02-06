@@ -1,7 +1,7 @@
 const fs = require('fs')
 const walk = require('walk')
 
-function fileWalker (targetPath) {
+function fileWalker (targetPath, skipMap = new Map()) {
   const minSize = 3e+8
   const files = []
   const walker = walk.walk(targetPath)
@@ -10,6 +10,10 @@ function fileWalker (targetPath) {
   return new Promise ((resolve, reject) => {
     walker.on('file', function (root, stat, next) {
       const { size, name, type } = stat
+
+      if (skipMap.has(name)) {
+        return next()
+      }
 
       if (size < minSize) {
         return next()
