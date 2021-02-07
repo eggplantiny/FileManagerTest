@@ -49,9 +49,6 @@ function fileWalker (targetPath, skipMap = new Map()) {
 }
 
 function folderWalker (targetPath) {
-  const statList = []
-  let count = 0
-
   const folderNameList = fs.readdirSync(targetPath)
   return folderNameList
 }
