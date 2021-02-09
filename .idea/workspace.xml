@@ -2,11 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee05242a-0689-4d5b-94df-6a136bdf2763" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/file-manager/src/plugins/router.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/file-manager/src/vue.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-manager/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-manager/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-manager/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/src/App.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-manager/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/src/components/HelloWorld.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file-manager/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/file-manager/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,9 +34,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="12.13.1" />
-    <property name="javascript.nodejs.core.library.typings.version" value="12.19.12" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vue-app" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.14.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.0" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,6 +88,7 @@
       <workItem from="1612606404189" duration="1737000" />
       <workItem from="1612695720388" duration="629000" />
       <workItem from="1612784524251" duration="484000" />
+      <workItem from="1612851640128" duration="1797000" />
     </task>
     <servers />
   </component>
