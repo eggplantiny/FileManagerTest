@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee05242a-0689-4d5b-94df-6a136bdf2763" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-manager/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-manager/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-manager/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-manager/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/src/components/HelloWorld.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-manager/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/file-manager/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/file-manager/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +13,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -36,7 +31,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="14.14.0" />
     <property name="javascript.nodejs.core.library.typings.version" value="14.14.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/file-manager/node_modules/@vue/cli-service/webpack.config.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -46,11 +41,15 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="settings.webpack" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\teddy.s.jung.SELVAS\dev\Workspace\FileManagerTest\file-manager" />
+      <recent name="C:\Users\teddy.s.jung.SELVAS\dev\Workspace\FileManagerTest\file-manager\src\backend" />
+      <recent name="C:\Users\teddy.s.jung.SELVAS\dev\Workspace\FileManagerTest\file-manager\src\frontend" />
       <recent name="D:\dev\workspace\fileManagerTest\videos" />
     </key>
   </component>
@@ -88,11 +87,60 @@
       <workItem from="1612606404189" duration="1737000" />
       <workItem from="1612695720388" duration="629000" />
       <workItem from="1612784524251" duration="484000" />
-      <workItem from="1612851640128" duration="1797000" />
+      <workItem from="1612851640128" duration="2157000" />
+      <workItem from="1612859304120" duration="405000" />
+      <workItem from="1612859735272" duration="440000" />
+      <workItem from="1612918053055" duration="517000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
