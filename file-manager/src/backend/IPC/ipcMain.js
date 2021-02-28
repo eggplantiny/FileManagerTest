@@ -1,4 +1,4 @@
-import { ipcMain } from 'electron'
+import { ipcMain, nativeImage  } from 'electron'
 import { folderWalker } from '../utils/walk'
 
 ipcMain.handle('read-file-list', (event, args = {}) => {
@@ -9,3 +9,14 @@ ipcMain.handle('read-file-list', (event, args = {}) => {
   return fileList
 })
 
+ipcMain.handle('read-image', (event, args = {}) => {
+  const path = '' + args.path
+
+  console.log(path)
+
+  if (!path) {
+    return null
+  }
+
+  return nativeImage.createFromPath(path)
+})
